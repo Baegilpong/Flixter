@@ -28,6 +28,9 @@ Flixter is an app that allows users to browse movies from the [The Movie Databas
 
 ### Notes
 Describe any challenges encountered while building the app.
+Encountered technical difficulties with Android Studios, specifically initially starting the project as Kotlin because of user error.
+Implemented all the code without first implementing the Android Internet permissions causing it to run into issues.
+Didn't debug to see if the AsyncHTTP was sending requests causing the program to not work when completely implemented.
 
 ### Open-source libraries used
 
