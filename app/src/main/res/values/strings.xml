@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Flixter</string>
+    <string name="sample_image">sample image</string>
 </resources>
