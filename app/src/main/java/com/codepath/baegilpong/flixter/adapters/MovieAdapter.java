@@ -82,6 +82,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             Glide.with(context)
                     .load(imageUrl)
                     .placeholder(R.mipmap.placeholder)
+                    .dontAnimate()
                     .dontTransform()
                     .into(ivPoster);
         }
