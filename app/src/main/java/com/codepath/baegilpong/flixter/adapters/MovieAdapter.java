@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -23,6 +22,8 @@ import com.codepath.baegilpong.flixter.models.Movie;
 import org.parceler.Parcels;
 
 import java.util.List;
+
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
 
@@ -77,6 +78,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         public void bind(Movie movie) {
             tvTitle.setText(movie.getTitle());
             tvOverview.setText(movie.getOverview());
+            int radius = 30; // corner radius, higher value = more rounded
+            int margin = 10; // crop margin, set to 0 for corners with no crop
 
             String imageUrl;
             // if phone is in landscape
@@ -90,9 +93,10 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             Glide.with(context)
                     .load(imageUrl)
                     .placeholder(R.mipmap.placeholder)
-                    .dontAnimate()
-                    .dontTransform()
+                    .centerCrop() // scale image to fill the entire ImageView
+                    .transform(new RoundedCornersTransformation(radius,margin))
                     .into(ivPoster);
+
 
             // 1. Register click listener on the whole row
             container.setOnClickListener(new View.OnClickListener() {
