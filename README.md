@@ -18,11 +18,11 @@ Flixter is an app that allows users to browse movies from the [The Movie Databas
   - [ ] Less popular videos rely on the detailed page should show an image preview that can initiate playing a YouTube video.
 - [ ] Add a play icon overlay to popular movies to indicate that the movie can be played (1 point).
 - [ ] Apply data binding for views to help remove boilerplate code. (1 point)
-- [ ] Add a rounded corners for the images using the Glide transformations. (1 point)
+- [x] Add a rounded corners for the images using the Glide transformations. (1 point)
 
 ### App Walkthrough GIF
 
-`TODO://` Add the URL to your animated app walkthough `gif` in the image tag below, `YOUR_GIF_URL_HERE`. Make sure the gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after after adding gif)
+<img src="https://github.com/Baegilpong/Flixter/blob/master/Flixter2.gif" width=250><br>
 
 ---
 
@@ -51,6 +51,9 @@ Encountered technical difficulties with Android Studios, specifically initially 
 Implemented all the code without first implementing the Android Internet permissions causing it to run into issues.
 Didn't debug to see if the AsyncHTTP was sending requests causing the program to not work when completely implemented.
 Undoing correct code after making a series of experimental edits that cause bugs (such as backdrop poster not being 350width).
+Creating heap dump to try and reduce RAM(1.5GB) usage when Android Studios was running.
+Git didn't allow java_pid to be pushed because file was too big (300mb).
+Fixed by following guide provided on https://www.codegrepper.com/code-examples/shell/how+to+remove+a+file+from+git+commit+after+push
 
 ### Open-source libraries used
 
